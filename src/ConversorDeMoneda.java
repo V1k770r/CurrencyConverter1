@@ -1,37 +1,40 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class ConversorDeMoneda {
 
-    String tipoDeMoneda = "Dolares";
-    double cantidad;
+    String tipoDeMoneda;
 
-    public void Convierte(String tipoDeMoneda, double cantidad){
+
+    public void Convierte(String tipoDeMoneda, BigDecimal cantidad){
 
         switch (tipoDeMoneda) {
             case "Dolares" ->
-                    System.out.println(cantidad + " Soles en " + tipoDeMoneda + " son: " + cantidad * 3.63 + " $");
+                    System.out.println(cantidad + " Soles en " + tipoDeMoneda + " son: " + cantidad.multiply(new BigDecimal("3.64")) + " $");
             case "Euros" ->
-                    System.out.println(cantidad + " Soles en " + tipoDeMoneda + " son: " + cantidad * 3.99 + " Є");
+                    System.out.println(cantidad + " Soles en " + tipoDeMoneda + " son: " + cantidad.multiply(new BigDecimal("3.99")) + " Є");
             case "Libras Esterlinas" ->
-                    System.out.println(cantidad + " Soles en " + tipoDeMoneda + " son: " + cantidad * 4.69 + " £");
+                    System.out.println(cantidad + " Soles en " + tipoDeMoneda + " son: " + cantidad.multiply(new BigDecimal("4.69")) + " £");
             case "Yen Japones" ->
-                    System.out.println(cantidad + " Soles en " + tipoDeMoneda + " son: " + cantidad * 0.026 + " ¥");
+                    System.out.println(cantidad + " Soles en " + tipoDeMoneda + " son: " + cantidad.multiply(new BigDecimal("0.026")) + " ¥");
             case "Won Sul-coreano" ->
-                    System.out.println(cantidad + " Soles en " + tipoDeMoneda + "son: " + cantidad * 0.028 + " ₩");
+                    System.out.println(cantidad + " Soles en " + tipoDeMoneda + "son: " + cantidad.multiply(new BigDecimal("0.028")) + " ₩");
             default -> System.out.println("Ingrese una cantidad correcta");
         }
     }
 
-    public void Desconvierte (String tipoDeMoneda, double cantidad) {
+    public void Desconvierte (String tipoDeMoneda, BigDecimal cantidad) {
 
         switch (tipoDeMoneda) {
             case "Dolares" ->
-                    System.out.println(cantidad + " " + tipoDeMoneda + " en Soles son: S/ " + cantidad / 3.63);
-            case "Euros" -> System.out.println(cantidad + " " + tipoDeMoneda + " en Soles son: S/ " + cantidad / 3.99);
+                    System.out.println(cantidad + " " + tipoDeMoneda + " en Soles son: S/ " + cantidad.divide(new BigDecimal("3.63"), 3, RoundingMode.UP));
+            case "Euros" -> System.out.println(cantidad + " " + tipoDeMoneda + " en Soles son: S/ " + cantidad.divide(new BigDecimal("3.99"), 3, RoundingMode.UP));
             case "Libras Esterlinas" ->
-                    System.out.println(cantidad + " " + tipoDeMoneda + " en Soles son: S/ " + cantidad / 3.69);
+                    System.out.println(cantidad + " " + tipoDeMoneda + " en Soles son: S/ " + cantidad.divide(new BigDecimal("3.69"), 3, RoundingMode.UP));
             case "Yen Japones" ->
-                    System.out.println(cantidad + " " + tipoDeMoneda + " en Soles son: S/ " + cantidad / 0.026);
+                    System.out.println(cantidad + " " + tipoDeMoneda + " en Soles son: S/ " + cantidad.divide(new BigDecimal("0.026"), 3, RoundingMode.UP));
             case "Won Sul-coreano" ->
-                    System.out.println(cantidad + " " + tipoDeMoneda + " en Soles son: S/ " + cantidad / 0.028);
+                    System.out.println(cantidad + " " + tipoDeMoneda + " en Soles son: S/ " + cantidad.divide(new BigDecimal("0.028"), 3, RoundingMode.UP));
             default -> System.out.println("Ingrese una opcion correcta");
         }
 

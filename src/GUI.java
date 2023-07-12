@@ -18,46 +18,6 @@ public class GUI {
 
 
 
-        int value = 2;
-        String moneda = "Yen";
-
-        switch(moneda) {
-            case "Dolares":
-                System.out.println("En Dolares es: " + value*3.63 + "$");
-                break;
-            case "Euros":
-                System.out.println("En Euros es: " + value*3.99 + "Є");
-                break;
-            case "Libras":
-                System.out.println("En Libras Esterlinas es: " + value*4.69 + "£");
-                break;
-            case "Yen":
-                System.out.println("En Yen Japones es: " + value*0.026 + "¥");
-                break;
-            case "Won":
-                System.out.println("En Won sul-coreano es: " + value*0.028 + "₩");
-            default:
-                System.out.println("Ingrese una opcion correcta");
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -4,8 +4,8 @@ import java.math.RoundingMode;
 public class TestConversorDeMoneda {
     public static void main(String[] args) {
 
-
         ConversorDeMoneda A = new ConversorDeMoneda();
+        System.out.println(A.validaDinero("1000000"));
         A.Convierte("Dolares", new BigDecimal("100"));
         A.Convierte("Libras Esterlinas", new BigDecimal("100"));
         A.Convierte("Euros", new BigDecimal("100"));

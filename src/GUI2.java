@@ -13,6 +13,15 @@ public class GUI2 {
 
         // componente JPanel`
 
+        Object[] possibleValues = { "Converor de Moneda", "Conversor de Temperatura"};
+
+        Object selectedValue = JOptionPane.showInputDialog(null,
+                "Selecciona una opcion de Conversion", "Conversor Alura One",
+                JOptionPane.INFORMATION_MESSAGE, null,
+                possibleValues, possibleValues[0]);
+
+
+
         JPanel miJPanel = new JPanel();
         miJPanel.setSize(300, 300);
         miJPanel.setLayout(new GridBagLayout());

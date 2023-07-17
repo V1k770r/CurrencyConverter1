@@ -30,7 +30,7 @@ public class ConversorGrafico extends JFrame {
     }
 
     public void mostrarMenu(){
-        // Inicializacion de los atributos "variables de la case"
+        // Inicializacion de los atributos "variables de la clase"
         menuBar = new JMenuBar();
         menu = new JMenu("Elija una opcion valida: ");
         opcion1 = new JMenuItem("Centimetros para metros");

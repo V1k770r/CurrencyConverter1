@@ -5,14 +5,6 @@ public class ConversorDeMoneda {
 
     String tipoDeMoneda;
 
-
-
-
-
-
-
-
-
     public boolean validaDinero(String cantidad){
         boolean valido = true;
         if(cantidad.length() != 7){
@@ -20,8 +12,6 @@ public class ConversorDeMoneda {
         }
         return valido;
     }
-
-
 
     public void Convierte(String tipoDeMoneda, BigDecimal cantidad){
 

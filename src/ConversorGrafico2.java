@@ -6,7 +6,6 @@ import java.math.BigDecimal;
 
 public class ConversorGrafico2 extends JFrame {
 
-
     private JMenuBar menuBar;
     private JMenu menu;
     private JMenuItem opcion1;
@@ -24,11 +23,9 @@ public class ConversorGrafico2 extends JFrame {
     public ConversorGrafico2(){
         setSize(500,170);
         setTitle("Conversor ORACLE - ONE :)");
-
+        centrarVentana();
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-
 
 
         JPanel panel = new JPanel();
@@ -37,6 +34,17 @@ public class ConversorGrafico2 extends JFrame {
         panel.add(menuBar);
 
         add(panel);
+    }
+
+    private void centrarVentana(){
+        Dimension tamañoVentana = getSize();
+        Dimension tamañoPantalla = Toolkit.getDefaultToolkit().getScreenSize();
+
+        int x = (tamañoPantalla.width - tamañoVentana.width)/ 2;
+        int y = (tamañoPantalla.height - tamañoVentana.height) /2;
+
+        setLocation(x,y);
+
     }
 
     public void mostrarMenu(){
@@ -102,13 +110,9 @@ public class ConversorGrafico2 extends JFrame {
                 A.validaDinero(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
-                A.Convierte("Dolares",Value);
+                String resultadoFinal = A.SolesAdolares (Value);
 
-                JLabel label = new JLabel();
-                label.setSize(200,300);
-                label.setName("100");
-
-
+                JOptionPane.showMessageDialog(null,"La Conversion es: " + resultadoFinal);
 
                 System.exit(0);
             }
@@ -139,8 +143,9 @@ public class ConversorGrafico2 extends JFrame {
 
     public static void main(String[] args) {
         ConversorGrafico2 ventana = new ConversorGrafico2();
-        ventana.setVisible(true);
 
+        ventana.setVisible(true);
+        //ventana.setLayout(new GridBagLayout());
 
 
     }

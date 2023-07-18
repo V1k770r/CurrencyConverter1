@@ -4,6 +4,9 @@ import java.math.RoundingMode;
 public class ConversorDeMoneda {
 
     String tipoDeMoneda;
+    String getTipoDeMoneda;
+    BigDecimal cantidad;
+
 
     public boolean validaDinero(String cantidad){
         boolean valido = true;
@@ -13,7 +16,17 @@ public class ConversorDeMoneda {
         return valido;
     }
 
-    public void Convierte(String tipoDeMoneda, BigDecimal cantidad){
+
+    public String SolesAdolares (BigDecimal cantidad){
+        return "\n" + cantidad + " Soles en dolares son: " + cantidad.divide(new BigDecimal("3.63"), 2, RoundingMode.UP) + " $";
+    }
+
+
+
+
+
+
+    public String Convierte(String tipoDeMoneda, BigDecimal cantidad){
 
         switch (tipoDeMoneda) {
 
@@ -27,11 +40,8 @@ public class ConversorDeMoneda {
             case "Won Sul-coreano" ->
                     System.out.println(cantidad + " Soles en " + tipoDeMoneda + " en Soles son: S/ " + cantidad.multiply(new BigDecimal("0.028")));
             default -> System.out.println("Ingrese una opcion correcta");
-
-
-
-
         }
+        return tipoDeMoneda;
     }
 
     public void Desconvierte (String tipoDeMoneda, BigDecimal cantidad) {
@@ -48,10 +58,6 @@ public class ConversorDeMoneda {
             case "Won Sul-coreano" ->
                     System.out.println(cantidad + " Soles en " + tipoDeMoneda + "son: " + cantidad.multiply(new BigDecimal("0.028")) + " ₩");
             default -> System.out.println("Ingrese una cantidad correcta");
-
-
-
-
 
         }
 

@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.math.BigDecimal;
 
 public class ConversorGrafico2 extends JFrame {
 
@@ -81,13 +82,34 @@ public class ConversorGrafico2 extends JFrame {
         menu.add(opcion9);
         menu.add(opcion10);
 
-
         menuBar.add(menu);
+
+
+//        Object[] possibleValues = { "Conversor de Moneda", "Conversor de Temperatura"};
+//
+//        Object selectedValue = JOptionPane.showInputDialog(null,
+//                "Selecciona una opcion de Conversion", "Conversor Alura One",
+//                JOptionPane.INFORMATION_MESSAGE, null,
+//                possibleValues, possibleValues[0]);
+
 
         opcion1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+
+                ConversorDeMoneda A = new ConversorDeMoneda();
+                A.validaDinero(inputValue);
+
+                BigDecimal Value = new BigDecimal(inputValue);
+                A.Convierte("Dolares",Value);
+
+                JLabel label = new JLabel();
+                label.setSize(200,300);
+                label.setName("100");
+
+
+
                 System.exit(0);
             }
         });

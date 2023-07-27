@@ -4,14 +4,14 @@ import java.math.RoundingMode;
 
 public class ConversorDeMoneda {
 
-    String cantidad;
-
     //Metodos de Validacion
     public String validarDinero(String cantidad){
-        if(!cantidad.matches("\\d+$")){
-            JOptionPane.showMessageDialog(null,"Ingresar solo valores numéricos");
+
+        if(!cantidad.matches("^\\d+(\\.\\d+)?$")){
+            JOptionPane.showMessageDialog(null, "Debe ingresar valores numéricos válidos",
+                    "Alerta", JOptionPane.ERROR_MESSAGE);
         }
-        return null;
+        return "Procede";
     }
 
     //Metodos de Conversion
@@ -26,7 +26,7 @@ public class ConversorDeMoneda {
     }
 
     public String SolesALibrasSterlinas (BigDecimal cantidad){
-        return "\n" + cantidad + " Soles en Libras Esterlinas son: "
+        return cantidad + " Soles \n en Libras Esterlinas son: "
                 + cantidad.divide(new BigDecimal("4.69"), 2, RoundingMode.UP) + " £";
     }
 

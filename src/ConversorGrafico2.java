@@ -8,29 +8,20 @@ import java.math.BigDecimal;
 public class ConversorGrafico2 extends JFrame {
 
     private JMenuBar menuBar;
-    private JMenu menu;
-    private JMenuItem opcion1;
-    private JMenuItem opcion2;
-    private JMenuItem opcion3;
-    private JMenuItem opcion4;
-    private JMenuItem opcion5;
-    private JMenuItem opcion6;
-    private JMenuItem opcion7;
-    private JMenuItem opcion8;
-    private JMenuItem opcion9;
-    private JMenuItem opcion10;
-    private JMenuItem opcion11;
+    private JMenu menu, menu2, menu3, menu4;
+    private JMenuItem opcion1, opcion2, opcion3, opcion4, opcion5, opcion6, opcion7, opcion8,
+                    opcion9, opcion10, opcion11, opcion12, opcion13, opcion14, opcion15, opcion16, opcion17;
 
 
     //creando constructor
     public ConversorGrafico2(){
-        setSize(350,100);
-        setTitle("Conversor ORACLE - ONE :)");
+        setSize(400,100);
+        setTitle("CONVERSOR ORACLE - ONE :)");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
-        mostrarMenu();
+        mostrarMenus();
         centrarVentana();
 
         panel.add(menuBar);
@@ -46,57 +37,87 @@ public class ConversorGrafico2 extends JFrame {
         setLocation(x,y);
     }
 
-    public void mostrarMenu(){
+    public void mostrarMenus(){
         // Inicializacion de los atributos "variables de la clase"
         menuBar = new JMenuBar();
-        menu = new JMenu("Que conversión deseas realizar?");
+        menu = new JMenu("Seleccione una opcion de conversión");
+        menu2 = new JMenu("Conversor de Moneda");
+        menu3 = new JMenu("Conversor de Temperatura");
+        menu4 = new JMenu("Salir");
 
-        opcion1 = new JMenuItem("Convertir soles en Dolares");
-        opcion2 = new JMenuItem("Convertir soles en Euros");
-        opcion3 = new JMenuItem("Convertir soles en Libras Sterlinas");
-        opcion4 = new JMenuItem("Convertir soles en Yens Japones");
-        opcion5 = new JMenuItem("Convertir soles en Won sul koreano");
-        opcion6 = new JMenuItem("Convertir Dolares en Soles");
-        opcion7 = new JMenuItem("Convertir Euros en Soles");
-        opcion8 = new JMenuItem("Convertir Libras Sterlinas en Soles");
-        opcion9 = new JMenuItem("Convertir Yens Japones en Soles");
-        opcion10 = new JMenuItem("Convertir Won sul Koreano en Soles");
+        //menu2 = new JMenu("Alguna otra conversion?");
+        opcion1 = new JMenuItem("Soles a Dolares");
+        opcion2 = new JMenuItem("Soles a Euros");
+        opcion3 = new JMenuItem("Soles a Libras Sterlinas");
+        opcion4 = new JMenuItem("Soles a Yens Japones");
+        opcion5 = new JMenuItem("Soles a Won sul koreano");
+        opcion6 = new JMenuItem("Dolares a Soles");
+        opcion7 = new JMenuItem("Euros a Soles");
+        opcion8 = new JMenuItem("Libras Sterlinas a Soles");
+        opcion9 = new JMenuItem("Yens Japones a Soles");
+        opcion10 = new JMenuItem("Won sul Koreano a Soles");
         opcion11 = new JMenuItem("Salir del Conversor");
+        opcion12 = new JMenuItem("Celciuos a Farenheir");
+        opcion13 = new JMenuItem("Celciuos a Kelvin");
+        opcion14 = new JMenuItem("Farenheir a Celciuos");
+        opcion15 = new JMenuItem("Farenheir a Kelvin");
+        opcion16 = new JMenuItem("Kelvin a Farenheir");
+        opcion17 = new JMenuItem("Kelvin a Celcious");
+
+
+
 
 
         //Agregando estilos a las opciones
-        Font myFont1 = new Font("Serif", Font.ITALIC, 22);
-        Font myFont2 = new Font("Arial", Font.BOLD, 18);
-        menu.setFont(myFont2);
-        opcion1.setFont(myFont1);
-        opcion2.setFont(myFont1);
-        opcion3.setFont(myFont1);
-        opcion4.setFont(myFont1);
-        opcion5.setFont(myFont1);
-        opcion6.setFont(myFont1);
-        opcion7.setFont(myFont1);
-        opcion8.setFont(myFont1);
-        opcion9.setFont(myFont1);
-        opcion10.setFont(myFont1);
+        Font myFont1 = new Font("Serif", Font.BOLD, 19);
+        Font myFont2 = new Font("Arial", Font.ITALIC, 19);
+        menu.setFont(myFont1);
+        menu2.setFont(myFont1);
+        menu3.setFont(myFont1);
+        menu4.setFont(myFont1);
 
-        menu.add(opcion1);
-        menu.add(opcion2);
-        menu.add(opcion3);
-        menu.add(opcion4);
-        menu.add(opcion5);
-        menu.add(opcion6);
-        menu.add(opcion7);
-        menu.add(opcion8);
-        menu.add(opcion9);
-        menu.add(opcion10);
-        menu.add(opcion11);
+        opcion1.setFont(myFont2);
+        opcion2.setFont(myFont2);
+        opcion3.setFont(myFont2);
+        opcion4.setFont(myFont2);
+        opcion5.setFont(myFont2);
+        opcion6.setFont(myFont2);
+        opcion7.setFont(myFont2);
+        opcion8.setFont(myFont2);
+        opcion9.setFont(myFont2);
+        opcion10.setFont(myFont2);
+        opcion11.setFont(myFont2);
+
+        menu2.add(opcion1);
+        menu2.add(opcion2);
+        menu2.add(opcion3);
+        menu2.add(opcion4);
+        menu2.add(opcion5);
+        menu2.add(opcion6);
+        menu2.add(opcion7);
+        menu2.add(opcion8);
+        menu2.add(opcion9);
+        menu2.add(opcion10);
+        menu2.add(opcion11);
+
+        menu3.add(opcion12);
+        menu3.add(opcion13);
+        menu3.add(opcion14);
+        menu3.add(opcion15);
+        menu3.add(opcion16);
+        menu3.add(opcion17);
+        menu3.add(opcion11);
 
         menuBar.add(menu);
+        menu.add(menu2);
+        menu.add(menu3);
+        menu.add(menu4);
+        //menuBar.add(menu2);
 
         opcion1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
                 conversorDeMoneda.validarDinero(inputValue);
@@ -105,13 +126,15 @@ public class ConversorGrafico2 extends JFrame {
                 String resultadoFinal = conversorDeMoneda.SolesAdolares (Value);
 
                 JOptionPane.showMessageDialog(null,"La conversion de " + resultadoFinal);
+                JOptionPane.showConfirmDialog(null, "¿Desea continuar?");
             }
         });
 
         opcion2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
                 conversorDeMoneda.validarDinero(inputValue);
@@ -126,7 +149,7 @@ public class ConversorGrafico2 extends JFrame {
         opcion3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
                 conversorDeMoneda.validarDinero(inputValue);
@@ -141,7 +164,7 @@ public class ConversorGrafico2 extends JFrame {
         opcion4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
                 conversorDeMoneda.validarDinero(inputValue);
@@ -156,7 +179,7 @@ public class ConversorGrafico2 extends JFrame {
         opcion5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
                 conversorDeMoneda.validarDinero(inputValue);
@@ -171,7 +194,7 @@ public class ConversorGrafico2 extends JFrame {
         opcion6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
                 conversorDeMoneda.validarDinero(inputValue);
@@ -186,7 +209,7 @@ public class ConversorGrafico2 extends JFrame {
         opcion7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
                 conversorDeMoneda.validarDinero(inputValue);
@@ -201,7 +224,7 @@ public class ConversorGrafico2 extends JFrame {
         opcion8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
                 conversorDeMoneda.validarDinero(inputValue);
@@ -216,7 +239,7 @@ public class ConversorGrafico2 extends JFrame {
         opcion9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
                 conversorDeMoneda.validarDinero(inputValue);
@@ -230,7 +253,7 @@ public class ConversorGrafico2 extends JFrame {
         opcion10.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad de soles que desee convertir");
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
                 conversorDeMoneda.validarDinero(inputValue);
@@ -246,8 +269,23 @@ public class ConversorGrafico2 extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "Que pena! Saliendo del programa");
+                JOptionPane.showMessageDialog(null, "Es una lástima! Saliendo del programa");
                 System.exit(0);
+            }
+        });
+
+
+        opcion12.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
+
+                ConversorDeTemperatura conversorDeTemperatura = new ConversorDeTemperatura();
+                conversorDeTemperatura.validarTemperatura(inputValue);
+                BigDecimal Value = new BigDecimal(inputValue);
+                String resultadoFinal = conversorDeTemperatura.CelciusAFarengeir(Value);
+                JOptionPane.showMessageDialog(null, "La conversion de " + resultadoFinal);
+                JOptionPane.showConfirmDialog(null, "¿Desea continuar?");
             }
         });
     }
@@ -256,5 +294,6 @@ public class ConversorGrafico2 extends JFrame {
     public static void main(String[] args) {
         ConversorGrafico2 ventana = new ConversorGrafico2();
         ventana.setVisible(true);
+
     }
 }

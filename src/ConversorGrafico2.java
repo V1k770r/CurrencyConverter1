@@ -7,15 +7,15 @@ import java.math.BigDecimal;
 
 public class ConversorGrafico2 extends JFrame {
 
-    private JMenuBar menuBar;
-    private JMenu menu, menu2, menu3, menu4;
-    private JMenuItem opcion1, opcion2, opcion3, opcion4, opcion5, opcion6, opcion7, opcion8,
+    public JMenuBar menuBar;
+    public JMenu menu, menu2, menu3, menu4;
+    public JMenuItem opcion1, opcion2, opcion3, opcion4, opcion5, opcion6, opcion7, opcion8,
                     opcion9, opcion10, opcion11, opcion12, opcion13, opcion14, opcion15, opcion16, opcion17;
 
 
     //creando constructor
     public ConversorGrafico2(){
-        setSize(400,100);
+        setSize(450,100);
         setTitle("CONVERSOR ORACLE - ONE :)");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -40,7 +40,7 @@ public class ConversorGrafico2 extends JFrame {
     public void mostrarMenus(){
         // Inicializacion de los atributos "variables de la clase"
         menuBar = new JMenuBar();
-        menu = new JMenu("Seleccione una opcion de conversión");
+        menu = new JMenu("SELECCIONE UNA OPCION DE CONVERSION");
         menu2 = new JMenu("Conversor de Moneda");
         menu3 = new JMenu("Conversor de Temperatura");
         menu4 = new JMenu("Salir");
@@ -57,11 +57,11 @@ public class ConversorGrafico2 extends JFrame {
         opcion9 = new JMenuItem("Yens Japones a Soles");
         opcion10 = new JMenuItem("Won sul Koreano a Soles");
         opcion11 = new JMenuItem("Salir del Conversor");
-        opcion12 = new JMenuItem("Celciuos a Farenheir");
+        opcion12 = new JMenuItem("Celciuos a Fahrenheit");
         opcion13 = new JMenuItem("Celciuos a Kelvin");
-        opcion14 = new JMenuItem("Farenheir a Celciuos");
-        opcion15 = new JMenuItem("Farenheir a Kelvin");
-        opcion16 = new JMenuItem("Kelvin a Farenheir");
+        opcion14 = new JMenuItem("Fahrenheit a Celciuos");
+        opcion15 = new JMenuItem("Fahrenheit a Kelvin");
+        opcion16 = new JMenuItem("Kelvin a Fahrenheit");
         opcion17 = new JMenuItem("Kelvin a Celcious");
 
 
@@ -114,13 +114,41 @@ public class ConversorGrafico2 extends JFrame {
         menu.add(menu4);
         //menuBar.add(menu2);
 
+
+
+
+
+//        private void calculandoSolicutud(new JMenuItem(), new ConversorDeMoneda()) {
+//            opcion1.addActionListener(new ActionListener() {
+//                @Override
+//                public void actionPerformed(ActionEvent e) {
+//                    String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
+//
+//                    ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
+//                    conversorDeMoneda.validarValorNumerico(inputValue);
+//
+//                    BigDecimal Value = new BigDecimal(inputValue);
+//                    String resultadoFinal = conversorDeMoneda.SolesAdolares (Value);
+//
+//                    JOptionPane.showMessageDialog(null,"La conversion de " + resultadoFinal);
+//                    JOptionPane.showConfirmDialog(null, "¿Desea continuar?");
+//                }
+//            });
+//
+//
+//        }
+
+
+
+
+
         opcion1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
-                conversorDeMoneda.validarDinero(inputValue);
+                conversorDeMoneda.validarValorNumerico(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
                 String resultadoFinal = conversorDeMoneda.SolesAdolares (Value);
@@ -137,7 +165,7 @@ public class ConversorGrafico2 extends JFrame {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
-                conversorDeMoneda.validarDinero(inputValue);
+                conversorDeMoneda.validarValorNumerico(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
                 String resultadoFinal = conversorDeMoneda.SolesAEuros (Value);
@@ -152,7 +180,7 @@ public class ConversorGrafico2 extends JFrame {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
-                conversorDeMoneda.validarDinero(inputValue);
+                conversorDeMoneda.validarValorNumerico(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
                 String resultadoFinal = conversorDeMoneda.SolesALibrasSterlinas (Value);
@@ -167,7 +195,7 @@ public class ConversorGrafico2 extends JFrame {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
-                conversorDeMoneda.validarDinero(inputValue);
+                conversorDeMoneda.validarValorNumerico(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
                 String resultadoFinal = conversorDeMoneda.SolesAYenJapones (Value);
@@ -182,7 +210,7 @@ public class ConversorGrafico2 extends JFrame {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
-                conversorDeMoneda.validarDinero(inputValue);
+                conversorDeMoneda.validarValorNumerico(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
                 String resultadoFinal = conversorDeMoneda.SolesAWonSulKoreano(Value);
@@ -197,7 +225,7 @@ public class ConversorGrafico2 extends JFrame {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
-                conversorDeMoneda.validarDinero(inputValue);
+                conversorDeMoneda.validarValorNumerico(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
                 String resultadoFinal = conversorDeMoneda.DolaresASoles(Value);
@@ -212,7 +240,7 @@ public class ConversorGrafico2 extends JFrame {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
-                conversorDeMoneda.validarDinero(inputValue);
+                conversorDeMoneda.validarValorNumerico(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
                 String resultadoFinal = conversorDeMoneda.EurosASoles (Value);
@@ -227,7 +255,7 @@ public class ConversorGrafico2 extends JFrame {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
-                conversorDeMoneda.validarDinero(inputValue);
+                conversorDeMoneda.validarValorNumerico(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
                 String resultadoFinal = conversorDeMoneda.LibrasEsterlinasASoles(Value);
@@ -242,7 +270,7 @@ public class ConversorGrafico2 extends JFrame {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
-                conversorDeMoneda.validarDinero(inputValue);
+                conversorDeMoneda.validarValorNumerico(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
                 String resultadoFinal = conversorDeMoneda.YenJaponesASoles(Value);
@@ -256,7 +284,7 @@ public class ConversorGrafico2 extends JFrame {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeMoneda conversorDeMoneda = new ConversorDeMoneda();
-                conversorDeMoneda.validarDinero(inputValue);
+                conversorDeMoneda.validarValorNumerico(inputValue);
 
                 BigDecimal Value = new BigDecimal(inputValue);
                 String resultadoFinal = conversorDeMoneda.WonSulCoreanoASoles(Value);
@@ -281,14 +309,16 @@ public class ConversorGrafico2 extends JFrame {
                 String inputValue = JOptionPane.showInputDialog("Ingrese la cantidad que desee convertir:");
 
                 ConversorDeTemperatura conversorDeTemperatura = new ConversorDeTemperatura();
-                conversorDeTemperatura.validarTemperatura(inputValue);
+                conversorDeTemperatura.validarValorNumerico(inputValue);
                 BigDecimal Value = new BigDecimal(inputValue);
-                String resultadoFinal = conversorDeTemperatura.CelciusAFarengeir(Value);
+                String resultadoFinal = conversorDeTemperatura.CelciusAFahrenheit(Value);
                 JOptionPane.showMessageDialog(null, "La conversion de " + resultadoFinal);
                 JOptionPane.showConfirmDialog(null, "¿Desea continuar?");
             }
         });
     }
+
+
 
 
     public static void main(String[] args) {

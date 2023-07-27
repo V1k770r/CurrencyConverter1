@@ -6,15 +6,15 @@ public class ConversoApp {
         int input = 0;
 
         while (input != 9){
-            Conversor.mostrarMenu();
+            Conversor1.mostrarMenu();
             input = entrada.nextInt();
 
             switch (input) {
                 case 1:
-                    Conversor.conversion("cm", "metros", 0.01, entrada);
+                    Conversor1.conversion("cm", "metros", 0.01, entrada);
                     break;
                 case 2:
-                    Conversor.conversion("metros", "cm", 100, entrada );
+                    Conversor1.conversion("metros", "cm", 100, entrada );
                     break;
                 case 9:
                     System.out.println("Que pena! Saliendo del programa ....");

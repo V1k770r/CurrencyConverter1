@@ -1,18 +1,7 @@
-import javax.swing.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class ConversorDeMoneda {
-
-    //Metodos de Validacion
-    public String validarDinero(String cantidad){
-
-        if(!cantidad.matches("^\\d+(\\.\\d+)?$")){
-            JOptionPane.showMessageDialog(null, "Debe ingresar valores numéricos válidos",
-                    "Alerta", JOptionPane.ERROR_MESSAGE);
-        }
-        return "Procede";
-    }
+public class ConversorDeMoneda extends Conversor {
 
     //Metodos de Conversion
     public String SolesAdolares (BigDecimal cantidad){

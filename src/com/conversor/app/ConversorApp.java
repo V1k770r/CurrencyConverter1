@@ -1,27 +1,30 @@
-import javax.swing.*;
+package com.conversor.app;
 
+import com.conversor.modelo.*;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
 import java.math.BigDecimal;
 
-public class ConversorGrafico2 extends JFrame {
+public class ConversorApp extends JFrame {
 
-    public JMenuBar menuBar;
-    public JMenu menu, menu2, menu3;
-    public JMenuItem opcion1, opcion2, opcion3, opcion4, opcion5, opcion6, opcion7, opcion8,
-              opcion9, opcion10, opcion11, opcion12, opcion13, opcion14, opcion15, opcion16, opcion17;
-
+    private JMenuBar menuBar;
+    private JMenu menu, menu2, menu3;
+    private JMenuItem opcion1, opcion2, opcion3, opcion4, opcion5, opcion6, opcion7, opcion8,
+              opcion9, opcion10, opcion11, opcion12, opcion13, opcion14, opcion15, opcion16, opcion17,
+                opcion18;
 
     //creando constructor
-    public ConversorGrafico2(){
+    public ConversorApp(){
         setSize(450,100);
         setTitle("CONVERSOR ORACLE - ONE");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
+        panel.setBackground(Color.LIGHT_GRAY);
         mostrarMenus();
         centrarVentana();
 
@@ -45,7 +48,6 @@ public class ConversorGrafico2 extends JFrame {
         menu2 = new JMenu("Conversor de Moneda");
         menu3 = new JMenu("Conversor de Temperatura");
 
-
         //menu2 = new JMenu("Alguna otra conversion?");
         opcion1 = new JMenuItem("Soles a Dolares");
         opcion2 = new JMenuItem("Soles a Euros");
@@ -62,8 +64,9 @@ public class ConversorGrafico2 extends JFrame {
         opcion13 = new JMenuItem("Celciuos a Kelvin");
         opcion14 = new JMenuItem("Fahrenheit a Celciuos");
         opcion15 = new JMenuItem("Fahrenheit a Kelvin");
-        opcion16 = new JMenuItem("Kelvin a Fahrenheit");
-        opcion17 = new JMenuItem("Kelvin a Celcious");
+        opcion16 = new JMenuItem("Kelvin a Celcious");
+        opcion17 = new JMenuItem("Kelvin a Fahrenheit");
+        opcion18 = new JMenuItem("Salir del Conversor");
 
 
         //Agregando estilos a las opciones
@@ -91,6 +94,7 @@ public class ConversorGrafico2 extends JFrame {
         opcion15.setFont(myFont2);
         opcion16.setFont(myFont2);
         opcion17.setFont(myFont2);
+        opcion18.setFont(myFont2);
 
 
         menu2.add(opcion1);
@@ -111,7 +115,7 @@ public class ConversorGrafico2 extends JFrame {
         menu3.add(opcion15);
         menu3.add(opcion16);
         menu3.add(opcion17);
-        menu3.add(opcion11);
+        menu3.add(opcion18);
 
         menuBar.add(menu);
         menu.add(menu2);
@@ -120,7 +124,6 @@ public class ConversorGrafico2 extends JFrame {
         JMenuItem [] options = new JMenuItem[]{opcion1, opcion2, opcion3, opcion4, opcion5, opcion6,
                 opcion7, opcion8, opcion9, opcion10, opcion11, opcion12, opcion13, opcion14, opcion15,
                 opcion16, opcion17};
-
 
             opcion1.addActionListener(new ActionListener() {
                 @Override
@@ -136,10 +139,8 @@ public class ConversorGrafico2 extends JFrame {
                     if (JOptionPane.OK_OPTION != confirmado){
                         System.exit(0);
                     }
-
                 }
             });
-
 
         opcion2.addActionListener(new ActionListener() {
             @Override
@@ -325,7 +326,7 @@ public class ConversorGrafico2 extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "Es una lástima! Saliendo del programa");
+                JOptionPane.showMessageDialog(null, "Es una lástima! Saliendo del Conversor");
                 System.exit(0);
             }
         });
@@ -439,10 +440,19 @@ public class ConversorGrafico2 extends JFrame {
             }
         });
 
+        opcion18.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Es una lástima! Saliendo del Conversor");
+                System.exit(0);
+            }
+        });
+
     }
 
     public static void main(String[] args) {
-        ConversorGrafico2 ventana = new ConversorGrafico2();
+        ConversorApp ventana = new ConversorApp();
         ventana.setVisible(true);
 
     }

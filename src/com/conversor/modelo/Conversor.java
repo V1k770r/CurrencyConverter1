@@ -2,7 +2,7 @@ package com.conversor.modelo;
 
 import javax.swing.*;
 
-public class Conversor {
+public abstract class Conversor {
 
     public void validarValorNumerico(String cantidad){
 

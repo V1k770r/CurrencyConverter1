@@ -1,6 +1,6 @@
 ## ![Bienvenido al Conversor APP](https://github.com/V1k770r/CurrencyConverter1/assets/115578032/4252b515-9038-4bbc-9c55-641feb8517f6)
 
-  <p align="left">
+  <p"center">
     <img src="https://img.shields.io/badge/license%20-%20MIT%20-%20red">
     <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
     <img src="https://img.shields.io/badge/release%20date%20-%20july%2023%20-%20light%20green%20">

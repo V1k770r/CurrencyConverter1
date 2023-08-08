@@ -34,10 +34,10 @@ public class ConversorApp extends JFrame {
 
     private void centrarVentana(){
         //Metodo para centrar ventana
-        Dimension tamañoVentana = getSize();
-        Dimension tamañoPantalla = Toolkit.getDefaultToolkit().getScreenSize();
-        int x = (tamañoPantalla.width - tamañoVentana.width) / 2;
-        int y = (tamañoPantalla.height - tamañoVentana.height) /2;
+        Dimension tamanoVentana = getSize();
+        Dimension tamanoPantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (tamanoPantalla.width - tamanoVentana.width) / 2;
+        int y = (tamanoPantalla.height - tamanoVentana.height) /2;
         setLocation(x,y);
     }
 
